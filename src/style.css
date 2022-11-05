@@ -125,7 +125,7 @@ body {
 
 /* Container of all rendered questions*/
 .all-questions-container {
-    min-width: 400px;
+    min-width: 350px;
     max-width: 600px;
     padding: 1px;
     position: relative;
@@ -232,14 +232,20 @@ hr {
 @media only screen and (max-width: 400px) {
     .blob--yellow {
         right: 10px;
-        top: 70px;
+        top: 50px;
     }
     .blob--cyan {
         left: 10px;
-        bottom: 70px;
+        bottom: 20px;
     }
     body {
-        padding-top: 30px;
         overflow: scroll;
+    }
+    .main-quizz-page {
+        justify-content: start;
+    }
+    .all-questions-container {
+        padding: 0;
+        margin: 0;
     }
 }
