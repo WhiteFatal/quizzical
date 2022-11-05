@@ -23,19 +23,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 /* Start quiz Button*/
 .button--start {
-    display: block;
     margin: 10px auto 200px auto;
     width: 193px;
-    height: 52px;
-    left: 179px;
-    top: 314px;
+    height: 52px;   
     background: #4D5B9E;
     border: 0px;
     border-radius: 15px;
+    position: relative;
+    z-index: 5;
     
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -49,11 +49,9 @@ body {
 
 /* Quizzical header*/
 .quizz {
-    margin: 50px auto 0;
-    width: 412px;
+    margin: 50px auto 0 auto;
+    width: auto;
     height: 41px;
-    left: 70px;
-    top: 218px;
     font-family: 'Karla', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -61,16 +59,16 @@ body {
     line-height: 37px;
     text-align: center;
     color: #293264;
+    position: relative;
+    z-index: 5;
 }
 
 /* Some description if needed */
 .description {
     display: block;
-    margin: 0 auto;
-    width: 318px;
+    margin: 0 auto 0 auto;
+    width: auto;
     height: 19px;
-    left: 117px;
-    top: 266px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -78,6 +76,8 @@ body {
     line-height: 19px;
     text-align: center;
     color: #293264;
+    position: relative;
+    z-index: 5;
 }
 
 /* Lemony - blob */
@@ -120,7 +120,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 10;
+    z-index: 5;
 }
 
 /* Container of all rendered questions*/
@@ -160,7 +160,8 @@ body {
 /* Quizz answer buttons container */
 .button-body {
     width: 100%;
-    z-index: 1;
+    position: relative;
+    z-index: 5;
 }
 
 /* Quizz answer button text */
@@ -207,6 +208,8 @@ hr {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 12.8px;
+    position: relative;
+    z-index: 5;
 }
 
 /* check answers button*/
@@ -221,5 +224,22 @@ hr {
     font-weight: 500;
     font-size: 10px;
     color: #F5F7FB;
-    cursor: pointer
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+}
+
+@media only screen and (max-width: 400px) {
+    .blob--yellow {
+        right: 10px;
+        top: 50px;
+    }
+    .blob--cyan {
+        left: 10px;
+        bottom: 50px;
+    }
+    body {
+        padding-top: 130px;
+        overflow: auto;
+    }
 }
