@@ -8,7 +8,7 @@ export default function MainQuizz(props) {
             return (   
                 <QuizzQuestions 
                     id={`Q${indQ}`}
-                    question={questionInstance.question.replace(/&#039;/g, "\'").replace(/&quot;/g, '\"').replace(/&ldquo;/g, "\“").replace(/&rsquo;/g, "\’").replace(/&rdquo;/g, "\”").replace(/&hellip;/g, "\…")}
+                    question={questionInstance.question.replace(/&#039;/g, "\'").replace(/&quot;/g, '\"').replace(/&ldquo;/g, "\“").replace(/&rsquo;/g, "\’").replace(/&rdquo;/g, "\”").replace(/&hellip;/g, "\…").replace(/&shy;/g, "\-")}
                     answers={questionInstance.answersData}
                     key={`Q${indQ}`}
                     selectAnswer={selectAnswer}
