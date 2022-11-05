@@ -2,9 +2,27 @@
     box-sizing: border-box;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #F5F7FB;
+    overflow: hidden;
+}
+
 /* intro-page */
 .start--page {
-   background-color: #F5F7FB;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #F5F7FB;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Start quiz Button*/
@@ -31,7 +49,6 @@
 
 /* Quizzical header*/
 .quizz {
-    display: block;
     margin: 50px auto 0;
     width: 412px;
     height: 41px;
@@ -65,36 +82,54 @@
 
 /* Lemony - blob */
 .blob--yellow {
-    display: flex;
-    margin: -5% 0% 0% 85% ;
+    display: flex;  
+    position: absolute;
+    top:-50px;
+    right: -100px; 
+    /* margin: -5% 0% 0% 85% ; */
     width: 297px;
     height: 235px; 
     
     background: #FFFAD1;
     transform: rotate(-128.49deg);
     border-radius: 250px 320px 210px 420px;
-    z-index: -1;
+    z-index: 1;
 }
 
 /* Cyan - blob */
 .blob--cyan {
     display: flex;
-    margin: -100px 20% 5% -15%;
+    position: absolute;
+    left:-100px;
+    bottom: -80px;
+    /* margin: -100px 20% 5% -15%; */
     
     width: 297px;
     height: 235px;
     background: #DEEBF8;    
     transform: rotate(-128.49deg);
     border-radius: 150px 320px 310px 520px;
-    z-index: -1;
+    z-index: 1;
+}
+
+.main-quizz-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
 }
 
 /* Container of all rendered questions*/
 .all-questions-container {
-    min-width: 600px;
-    max-width: 800px;
-    margin: -180px auto 0 auto;
+    min-width: 400px;
+    max-width: 600px;
     padding: 1px;
+    position: relative;
+    z-index: 5;
 }
 
 /* Quizz questions overall settings */
@@ -104,8 +139,6 @@
     flex-direction: column;
     padding-left: 80px;
     padding-top: 20px;    
-       
-    
 }
 
 /* Quizz question text */
@@ -174,7 +207,6 @@ hr {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 12.8px;
-    
 }
 
 /* check answers button*/

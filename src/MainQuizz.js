@@ -24,7 +24,7 @@ export default function MainQuizz(props) {
     }
     
     return (
-        <main>
+        <main className="main-quizz-page">
             <div className="blob--yellow"></div>
             <div className="all-questions-container">                 
                 {renderQuestions()}
